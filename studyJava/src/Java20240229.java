@@ -57,6 +57,14 @@ public class Java20240229 {
         if (num % 2 == 0) {
             System.out.println("num은 짝수");
         }
+        // if문 속에 if문
+        if (true) {
+            if (true) {
+                if (true) {
+                    System.out.println("if문 속에 if문");
+                }
+            }
+        }
     }
 }
 
