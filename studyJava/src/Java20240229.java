@@ -65,8 +65,27 @@ public class Java20240229 {
                 }
             }
         }
+
+        // Switch case
+        int number = 1;
+        switch(number) {
+            case 1:
+                System.out.println("A");
+                break;  // 항상 break 키워드와 함께 쓰자 !!!
+            case 2:
+                System.out.println("B");
+                break;
+            case 3:
+                System.out.println("C");
+                break;
+            default:
+                System.out.println("D");
+                break;
+        }
     }
 }
+
+
 
 
 
