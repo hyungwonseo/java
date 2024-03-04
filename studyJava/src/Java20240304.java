@@ -11,7 +11,20 @@ public class Java20240304 {
 //        }
 
         // for문 변형하기
-        
+        int i = 0;
+        for (  ; ; ) {
+            if (i < 5) {
+                System.out.print(i + " ");
+                i++;
+            }else {
+                break;
+            }
+        }
+        System.out.println();
+        // 멀티 조건식
+        for (int a=0, b=0; a<5 || b<5; a++, b++) {
+            System.out.print(a + "_" + b + " ");
+        }
     }
 }
 
