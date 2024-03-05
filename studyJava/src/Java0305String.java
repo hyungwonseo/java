@@ -2,6 +2,7 @@ public class Java0305String {
     public static void main(String[] args) {
         // String 클래스의 첫번째 특징
         // 객체의 값을 변경하면 새로운 객체를 생성 (주소값이 새로운 주소로 변경)
+        // String 객체 변수는 값이 수정되지 않고 항상 새로운 값을 만듬!!
         String str1 = new String("Start");
         String str2 = str1;
         System.out.println(str1);
@@ -17,5 +18,7 @@ public class Java0305String {
         String str4 = "Start";
         System.out.println(str3 == str4);
         System.out.println(str3 == str5);
+
+
     }
 }
