@@ -13,12 +13,29 @@ public class Java0305String {
 
         // String 클래스의 두번째 특징
         // 리터럴로 입력하는 경우, 해당 문자열을 재사용(=공유)함
+        // 리터럴로 입력되는 값은 런타임이전에 이미 메모리에 만들어짐
         String str5 = new String("Start");
         String str3 = "Start";
         String str4 = "Start";
         System.out.println(str3 == str4);
         System.out.println(str3 == str5);
+        System.out.println(str3.equals(str5)); // 문자열자체를 비교하면 true
 
+        // 문자열의 '+' 연산
+        String a1 = "Hello";
+        String a2 = "World";
+        System.out.println(a1 + " " + a2);
 
+        // 문자열과 숫자의 '+' 연산
+        System.out.println(1 + "Hi"); // 1Hi
+        System.out.println(1 + 2 + "Hi"); // 3Hi
+        System.out.println("Hi" + 1 + 2); // Hi12
     }
 }
+
+
+
+
+
+
+
