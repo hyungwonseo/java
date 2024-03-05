@@ -1,4 +1,4 @@
-public class Java20240304Array {
+public class Java0304Array {
     public static void main(String[] args) {
         // 배열의 기본 선언법
         int[] intArray1 = {1,2,3,4,5};

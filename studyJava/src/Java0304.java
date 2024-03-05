@@ -1,4 +1,4 @@
-public class Java20240304 {
+public class Java0304 {
     public static void main(String[] args) {
         // for반복문의 기본형
         for (int i = 0; i < 10; i++) {

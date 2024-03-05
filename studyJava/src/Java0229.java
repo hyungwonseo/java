@@ -1,4 +1,4 @@
-public class Java20240229 {
+public class Java0229 {
     public static void main(String[] args) {
         // if 단독사용
         boolean x = true;

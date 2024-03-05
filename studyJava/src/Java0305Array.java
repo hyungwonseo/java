@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Java20240305Array {
+public class Java0305Array {
     public static void main(String[] args) {
         // 배열 선언법
         int[] intArray1; // 자바 스타일!!!
