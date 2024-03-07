@@ -68,19 +68,19 @@ public class Java0306Array {
         System.out.print("이름을 입력해주세요 : ");
         String inputStr = scan2.nextLine();
         boolean found = false;
-        for (int i=0; i< members.length; i++) {
-            if (members[i].equalsIgnoreCase(inputStr)) {
-                System.out.println(members[i] + "님 환영합니다");
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            System.out.println("회원가입해주세요");
-        }
+//        for (int i=0; i< members.length; i++) {
+//            if (members[i].equalsIgnoreCase(inputStr)) {
+//                System.out.println(members[i] + "님 환영합니다");
+//                found = true;
+//                break;
+//            }
+//        }
+//        if (!found) {
+//            System.out.println("회원가입해주세요");
+//        }
 
 //        for (int i=0; i< members.length; i++) {
-//            if (members[i].equalsIgnoreCase(inputStr.toLowerCase())) {
+//            if (members[i].equalsIgnoreCase(inputStr)) {
 //                System.out.println(members[i] + "님 환영합니다");
 //                break;
 //            }
@@ -88,5 +88,15 @@ public class Java0306Array {
 //                System.out.println("회원가입해주세요");
 //            }
 //        }
+        int k = 0;
+        for ( ; k< members.length; k++) {
+            if (members[k].equalsIgnoreCase(inputStr)) {
+                System.out.println(members[k] + "님 환영합니다");
+                break;
+            }
+        }
+        if (k == members.length) {
+            System.out.println("회원가입해주세요");
+        }
     }
 }
