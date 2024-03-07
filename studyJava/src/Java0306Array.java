@@ -94,7 +94,9 @@ public class Java0306Array {
                 System.out.println(members[k] + "님 환영합니다");
                 break;
             }
+            System.out.println(k);
         }
+        System.out.println(k);
         if (k == members.length) {
             System.out.println("회원가입해주세요");
         }
