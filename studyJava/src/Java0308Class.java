@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Java0308Class {
     public static void main(String[] args) {
         Students tom = new Students("Tom", 18, "Daejeon", "123456");
