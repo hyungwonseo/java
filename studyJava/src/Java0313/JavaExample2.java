@@ -7,5 +7,10 @@ public class JavaExample2 {
         // 스페이스는 카운트하지 마시오
         String string = "The best of both worlds";
         int count = 0;
+        for(int i = 0; i < string.length(); i++) {
+            if(string.charAt(i) != ' ')
+                count++;
+        }
+        System.out.println("글자수 : " + count);
     }
 }
