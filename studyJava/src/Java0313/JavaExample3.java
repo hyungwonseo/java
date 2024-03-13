@@ -15,11 +15,11 @@ public class JavaExample3 {
         for(int i = 0; i < n; i++){
             int j, first;
 
-            first = arr[0];
+            first = arr[0];  // 포인트 1
             for(j = 0; j < arr.length-1; j++){
                 arr[j] = arr[j+1];
             }
-            arr[j] = first;
+            arr[j] = first;  // 포인트 2
         }
         System.out.println();
 
