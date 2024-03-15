@@ -19,7 +19,6 @@ public class Count {
                 cCount++;
             }
         }
-        System.out.println((int)'z');
         System.out.println("모음의 갯수: " + vCount);
         System.out.println("자음의 갯수: " + cCount);
     }
