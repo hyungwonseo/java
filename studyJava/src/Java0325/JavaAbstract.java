@@ -21,6 +21,13 @@ abstract public class JavaAbstract {
         return a;
     }
     abstract public String getString();
+
+    public void setValue(int a) { // 세터(Setter) 메서드
+        this.a = a;
+    }
+    public void setString(String b) { // 세터(Setter) 메서드
+        this.b = b;
+    }
 }
 
 

@@ -11,4 +11,21 @@ public class JavaChild extends JavaAbstract{
     public String getString() {
         return "이것은 자식 클래스";
     }
+
+    public void setValue(int a) {
+        super.setValue(a);
+    }
+
+    public void setString(String b) {
+        super.setString(b);
+    }
 }
+
+
+
+
+
+
+
+
+
