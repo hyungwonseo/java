@@ -9,11 +9,12 @@ public class JavaChild extends JavaAbstract{
     }
     @Override
     public String getString() {
-        return "이것은 자식 클래스";
+        return super.b;
     }
 
     public void setValue(int a) {
-        super.setValue(a);
+        super.setValue(a); // 자바스타일. 자바는 세터와 게터를 사용하는 것을 추천함!!!
+        // super.a = a; // 비추천. 자바스타일 아님
     }
 
     public void setString(String b) {

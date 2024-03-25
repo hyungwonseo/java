@@ -10,6 +10,12 @@ public class Main {
         JavaChild javaChild1 = new JavaChild(20, "Apple");
         System.out.println(javaChild1.getValue());
         System.out.println(javaChild1.getString());
+
+        JavaChild javaChild2 = new JavaChild();
+        javaChild2.setValue(999);
+        javaChild2.setString("Banana");
+        System.out.println(javaChild2.getValue());
+        System.out.println(javaChild2.getString());
     }
 }
 
