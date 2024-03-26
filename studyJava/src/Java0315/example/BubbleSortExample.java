@@ -2,7 +2,7 @@ package Java0315.example;
 
 import java.util.Arrays;
 
-public class example {
+public class BubbleSortExample {
     static void bubbleSort(int[] arr) {
         int n = arr.length;
         int temp = 0;
