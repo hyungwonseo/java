@@ -1,3 +1,5 @@
+package Java0229_0312;
+
 public class Java0304Array {
     public static void main(String[] args) {
         // 배열의 기본 선언법

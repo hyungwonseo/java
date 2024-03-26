@@ -1,3 +1,5 @@
+package Java0229_0312;
+
 public class Java0311Method {
     static int a = 1;
     static int b = 2;

@@ -1,3 +1,5 @@
+package Java0229_0312;
+
 import java.util.Arrays;
 
 public class Java0305Array2 {

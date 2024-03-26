@@ -1,3 +1,5 @@
+package Java0229_0312;
+
 import java.util.Arrays;
 
 public class Java0312Array {
@@ -11,7 +13,7 @@ public class Java0312Array {
         System.out.println(Arrays.toString(intArray1));
         System.out.println(Arrays.toString(intArray2));
 
-        // 위 코드 작성한 후, git에 올려져있는 Java0312Array2.java 코드 분석!!
+        // 위 코드 작성한 후, git에 올려져있는 Java0229_0312.Java0312Array2.java 코드 분석!!
     }
 }
 

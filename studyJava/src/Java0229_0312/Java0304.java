@@ -1,3 +1,5 @@
+package Java0229_0312;
+
 public class Java0304 {
     public static void main(String[] args) {
         // for반복문의 기본형

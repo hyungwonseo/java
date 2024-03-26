@@ -1,3 +1,5 @@
+package Java0229_0312;
+
 public class Java0305 {
     public static void main(String[] args) {
         // break = 제어문의 중괄호를 탈출시키는 키워드
