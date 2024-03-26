@@ -1,5 +1,7 @@
 package Java0326Example2;
 
+import java.util.Arrays;
+
 public class InsertionSortExample {
 
     // Insertion 정렬의 알고리즘을 이해하고

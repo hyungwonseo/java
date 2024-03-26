@@ -8,5 +8,8 @@ public class Main {
         Circle circle = new Circle(5);
         System.out.println("Area: " + circle.calculateArea());
         System.out.println("Perimeter: " + circle.calculatePerimeter());
+        Triangle triangle = new Triangle(4, 5);
+        System.out.println("Area: " + triangle.calculateArea());
+        System.out.println("Perimeter: " + triangle.calculatePerimeter());
     }
 }
