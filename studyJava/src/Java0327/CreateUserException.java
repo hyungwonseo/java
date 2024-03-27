@@ -27,9 +27,10 @@ class A {
             if(num>70)
                 System.out.println("정상작동");
             else
-                throw new MyException(); //예외를 던진 이시점에 예외 발생
+                throw new MyException("나이가 70이하임 : " + num); //예외를 던진 이시점에 예외 발생
         } catch (MyException e) {
             System.out.println("예외처리 1");
+            System.out.println(e.getMessage());
         }
     }
     void bcd_1() {
@@ -40,7 +41,7 @@ class A {
         if(num>70)
             System.out.println("정상작동");
         else
-            throw new MyException(); //예외를 던진 이시점에 예외 발생
+            throw new MyException("예외전가 => 나이가 70이하임 : " + num); //예외를 던진 이시점에 예외 발생
     }
 
     void bcd_2() {
@@ -48,6 +49,8 @@ class A {
             abc_2(65);
         } catch (MyException e) {
             System.out.println("예외처리 2");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
