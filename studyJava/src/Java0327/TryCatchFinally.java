@@ -22,5 +22,8 @@ public class TryCatchFinally {
             System.out.println("프로그램 종료3");
         }
         //System.out.println("여기가 실행될까?");
+        // try 밖에 실행코드를 넣는것은 좋지 않음.
+        // 이 위치는 예외가 발생해도 실행이 되기 때문에 실행코드의 의미가 없음
+        // 정상의 경우라면 try 또는 finally 안에서 실행코드를 마무리하는 것이 좋음
     }
 }
