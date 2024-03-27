@@ -48,6 +48,7 @@ public class Array2D {
             for(int j=0; j<e[i].length; j++) {
                 System.out.print(e[i][j] + " ");
             }
+            System.out.println();
         }
         System.out.println();
     }
