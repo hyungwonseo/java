@@ -15,7 +15,7 @@ public class Example1 {
 
 
 
-        System.out.println("total="+total);
-        System.out.println("average="+average);
+        System.out.println("total="+total); // 325
+        System.out.println("average="+average); // 16.25
     }
 }
