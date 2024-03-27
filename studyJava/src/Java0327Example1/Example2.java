@@ -10,6 +10,6 @@ public class Example2 {
 
 
 
-        System.out.println("sum="+sum);
+        System.out.println("sum="+sum); // 15
     }
 }
