@@ -12,9 +12,15 @@ public class Example1 {
         };
         int total = 0;
         float average = 0;
-
-
-
+        //float num = 0;
+        for(int i=0; i < arr.length;i++) {
+            for(int j=0; j < arr[i].length;j++) {
+                total += arr[i][j];
+            }
+            //num = num + arr[i].length;
+        }
+        average = total /(float)(arr.length * arr[0].length);
+        //average = total / num;
         System.out.println("total="+total); // 325
         System.out.println("average="+average); // 16.25
     }

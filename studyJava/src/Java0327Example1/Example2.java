@@ -7,9 +7,10 @@ public class Example2 {
         // num이 12345 이면 , ‘1+2+3+4+5’ 15 의 결과인 를 출력
         int num = 12345;
         int sum = 0;
-
-
-
+        while(num > 0) {
+            sum += num%10;
+            num = num / 10;
+        }
         System.out.println("sum="+sum); // 15
     }
 }
