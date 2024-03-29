@@ -8,7 +8,8 @@ public class Main {
     static ArrayList<Lecture> lectures;
     static ArrayList<LectureRegistration> lectureRegistrations;
     public static void main(String[] args) {
-        InfoCreate.createInfos(users, lectures, lectureRegistrations);
+        // 정보 초기화
+        InfoCreate.createInfos();
 
         // 강의 ID로 수강하는 학생의 loginId 찾기
         getLoginIdByLectureId(2);
