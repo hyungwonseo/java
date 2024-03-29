@@ -1,4 +1,4 @@
-package Java0328;
+package Java0328_User;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,8 +28,10 @@ public class InfoCreate {
                 , LectureCategory.fromString("modeling3d"), "beginner"));
 
         Main.lectureRegistrations = new ArrayList<>();
-        Main.lectureRegistrations.add(new LectureRegistration("hero11", 1));
-        Main.lectureRegistrations.add(new LectureRegistration("hero11", 2));
+        LectureRegistration x = new LectureRegistration("hero11", 1);
+        Main.lectureRegistrations.add(x);
+        x = new LectureRegistration("hero11", 2);
+        Main.lectureRegistrations.add(x);
         Main.lectureRegistrations.add(new LectureRegistration("hero11", 3));
         Main.lectureRegistrations.add(new LectureRegistration("tommy", 2));
         Main.lectureRegistrations.add(new LectureRegistration("sue", 1));

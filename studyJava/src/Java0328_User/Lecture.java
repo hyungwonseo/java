@@ -1,4 +1,4 @@
-package Java0328;
+package Java0328_User;
 
 public class Lecture {
     int lectureId;
