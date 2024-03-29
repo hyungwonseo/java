@@ -4,13 +4,13 @@ public class Lecture {
     int lectureId;
     String title;
     int duration;
-    String category;
+    LectureCategory category;
     String difficulty;
 
     public Lecture() {
     }
 
-    public Lecture(int lectureId, String title, int duration, String category, String difficulty) {
+    public Lecture(int lectureId, String title, int duration, LectureCategory category, String difficulty) {
         this.lectureId = lectureId;
         this.title = title;
         this.duration = duration;
@@ -42,11 +42,11 @@ public class Lecture {
         this.duration = duration;
     }
 
-    public String getCategory() {
+    public LectureCategory getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(LectureCategory category) {
         this.category = category;
     }
 

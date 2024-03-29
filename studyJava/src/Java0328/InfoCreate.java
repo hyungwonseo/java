@@ -19,11 +19,13 @@ public class InfoCreate {
 
         Main.lectures = new ArrayList<>();
         Main.lectures.add(new Lecture(1, "Java", 100
-                , "Programming", "beginner"));
+                , LectureCategory.PROGRAMMING, "beginner"));
         Main.lectures.add(new Lecture(2, "Spring", 150
-                , "Programming", "intermediate"));
+                , LectureCategory.PROGRAMMING, "intermediate"));
         Main.lectures.add(new Lecture(3, "Javascript", 80
-                , "Programming", "beginner"));
+                , LectureCategory.PROGRAMMING, "beginner"));
+        Main.lectures.add(new Lecture(4, "Blender1", 300
+                , LectureCategory.fromString("modeling3d"), "beginner"));
 
         Main.lectureRegistrations = new ArrayList<>();
         Main.lectureRegistrations.add(new LectureRegistration("hero11", 1));
