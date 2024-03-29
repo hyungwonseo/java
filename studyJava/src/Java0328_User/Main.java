@@ -6,9 +6,11 @@ public class Main {
     static ArrayList<User> users;
     static ArrayList<Lecture> lectures;
     static ArrayList<LectureRegistration> lectureRegistrations;
+    static ArrayList<Review> reviews;
     public static void main(String[] args) {
         // 정보 초기화
         InfoCreate.createInfos();
+        reviews = new ArrayList<>();
 
         // 강의 ID로 수강하는 학생의 loginId 찾기
         getLoginIdByLectureId(2);
@@ -16,6 +18,13 @@ public class Main {
         getTitleByLoginId("hero11");
         // 강의명으로 수강생들의 이메일 찾기
         getEmailByLectureTitle("Javascript");
+
+        boolean canAddReview = false;
+        canAddReview = createReview("hero11", 1, 10, "아주 좋았어요");
+        // void가 아닌 리턴형이 있는 메소드는 활용범위가 넓음. 예를 들어,
+        // canAddReview의 true/false 여부에 따라 유저에게 상태 알림을 보낼 수 있음
+        canAddReview = createReview("hero11", 2, 10, "아주 좋았어요2");
+        canAddReview = createReview("nice", 3, 6, "보통이에요");
     }
 
     // 수강등록클래스에서 lectureId로 수강생의 loginId 찾기
@@ -23,8 +32,8 @@ public class Main {
     public static void getLoginIdByLectureId(int lectureId) {
         for(int i=0; i<lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == lectureId) {
-                System.out.println("1. 로그인ID : "
-                        + lectureRegistrations.get(i).getLoginId());
+                String loginId = lectureRegistrations.get(i).getLoginId();
+                System.out.println("1. 로그인ID : " + loginId);
             }
         }
     }
@@ -72,6 +81,41 @@ public class Main {
                 }
             }
         }
+    }
+
+    public static boolean createReview(String loginId, int lectureId
+            , int rating, String text) {
+        // 점수체크
+        if (rating < 1 || rating > 10) {
+            System.out.println("평가점수는 1~10점 사이입니다.");
+            return false;
+        }
+        // 기존 리뷰 확인
+        if (!reviews.isEmpty()) {
+            for(Review review : reviews) {
+               if (review.getLoginId().equals(loginId)
+                       && review.getLectureId() == lectureId) {
+                   System.out.println("이미 작성한 리뷰가 있습니다.");
+                   return false;
+               }
+            }
+        }
+        // 수강여부 확인
+        boolean canReview = false;
+        for(LectureRegistration registration : lectureRegistrations) {
+            if (registration.getLoginId().equals(loginId)
+                    && registration.getLectureId() == lectureId) {
+                canReview = true;
+                break;                
+            }
+        }
+        if (!canReview) {
+            System.out.println("리뷰 작성 권한이 없습니다.");
+            return false;
+        }
+        reviews.add(new Review(reviews.size()+1, rating, text, loginId, lectureId));
+        System.out.println(reviews.toString());
+        return true;
     }
 }
 
