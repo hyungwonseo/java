@@ -1,0 +1,11 @@
+1) Teacher 클래스
+
+2) LectureTeacher 클래스
+- 어느 teacher가 어느 과목을 가르치는지 관계를 저장하는 클래스
+
+3) 관련 메서드 만들기
+3-1) getTeacherByLectureId : 특정 과목ID로 해당 과목을 가르치는 teacher의 이름 출력
+3-2) getLectureTitleListByTeacherId : 특정 teacher가 가르치는 과목명 리스트 출력 
+                                                (반드시 배열에 담아서 리턴)
+
+
