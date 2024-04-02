@@ -8,3 +8,16 @@
 1-2) freeBoardId 필드 사용
      : 댓글이 자유게시판의 어느 글의 댓글인지 저장
 1-3) Reply 객체가 생성될때 1-2의 해당 글의 객체에 있는 replies에 등록이 되어야 한다!!!
+     : 해결하기 위한 단계별 예시
+     - freeBoardId를 이용하여 해당 FreeBoard 객체를 찾는다
+     - 위에서 찾은 FreeBoard 객체내에 setReplies 메서드를 이용하여 Reply 객체를 
+        FreeBoard 객체의 replies에 추가한다 
+        => 이때 setReplies 메서드의 내용을 변경할 필요가 있을 수 있음!!
+
+
+
+
+
+
+
+
