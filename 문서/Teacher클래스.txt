@@ -1,5 +1,5 @@
 1) Teacher 클래스
-- User의 로그인ID처럼 teacherId 필요
+- User의 로그인ID처럼 teacherId 필요 ==> 유니크한 필드로 사용
 - 이름필드 필요
 - 기타 필요한 필드는 각자 만들어주세요.
 
