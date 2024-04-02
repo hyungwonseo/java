@@ -50,6 +50,10 @@ public class HashSetMethod {
 		while(iterator.hasNext()) { //총 3바퀴
 			System.out.println(iterator.next());
 		}
+		// 일반적인 for는 Set가 인덱스가 없으므로 사용할 수 없지만 아래 방식으로는 가능함!
+		for(String str : hSet3) {
+			System.out.println("forEach : " + str);
+		}
 		
 		//#9. toArray()
 		Object[] objArray = hSet3.toArray();
