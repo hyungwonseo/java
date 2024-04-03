@@ -1,8 +1,8 @@
 package Java0328_User;
 
 public class LectureRegistration {
-    String loginId;
-    int lectureId;
+    private String loginId;
+    private int lectureId;
 
     public LectureRegistration() {
     }

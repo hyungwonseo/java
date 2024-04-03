@@ -1,11 +1,11 @@
 package Java0328_User;
 
 public class Lecture {
-    int lectureId;
-    String title;
-    int duration;
-    LectureCategory category;
-    String difficulty;
+    private int lectureId;
+    private String title;
+    private int duration;
+    private LectureCategory category;
+    private String difficulty;
 
     public Lecture() {
     }

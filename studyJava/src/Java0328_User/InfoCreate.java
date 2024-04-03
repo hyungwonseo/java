@@ -1,5 +1,7 @@
 package Java0328_User;
 
+import Java0326.A;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -28,14 +30,42 @@ public class InfoCreate {
                 , LectureCategory.fromString("modeling3d"), "beginner"));
 
         Main.lectureRegistrations = new ArrayList<>();
-        LectureRegistration x = new LectureRegistration("hero11", 1);
-        Main.lectureRegistrations.add(x);
-        x = new LectureRegistration("hero11", 2);
-        Main.lectureRegistrations.add(x);
+        Main.lectureRegistrations.add(new LectureRegistration("hero11", 1));
+        Main.lectureRegistrations.add(new LectureRegistration("hero11", 2));
         Main.lectureRegistrations.add(new LectureRegistration("hero11", 3));
         Main.lectureRegistrations.add(new LectureRegistration("tommy", 2));
         Main.lectureRegistrations.add(new LectureRegistration("sue", 1));
         Main.lectureRegistrations.add(new LectureRegistration("nice", 3));
         Main.lectureRegistrations.add(new LectureRegistration("goodlife", 1));
+
+        Main.teachers = new ArrayList<>();
+        Main.teachers.add(new Teacher("teacherNo1", "Michael"));
+        Main.teachers.add(new Teacher("teacherNo2", "Adrian"));
+
+        Main.lectureTeachers = new ArrayList<>();
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo1", 1));
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo1", 2));
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo2", 3));
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo2", 4));
+
+        Main.freeBoards = new ArrayList<>();
+        Main.freeBoards.add(new FreeBoard(1, "게시글 1"
+                , "게시판을 이용합시다", "tommy"));
+        Main.freeBoards.add(new FreeBoard(2, "게시글 2"
+                , "글이 너무 없네요", "sue"));
+        Main.freeBoards.add(new FreeBoard(3, "게시글 3"
+                , "너무 배고프다", "nice"));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

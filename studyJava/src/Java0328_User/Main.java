@@ -1,12 +1,19 @@
 package Java0328_User;
 
+import Java0326.A;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     static ArrayList<User> users;
     static ArrayList<Lecture> lectures;
     static ArrayList<LectureRegistration> lectureRegistrations;
     static ArrayList<Review> reviews;
+    static ArrayList<Teacher> teachers;
+    static ArrayList<LectureTeacher> lectureTeachers;
+    static ArrayList<FreeBoard> freeBoards;
+    static ArrayList<Reply> replyArrayList;
     public static void main(String[] args) {
         // 정보 초기화
         InfoCreate.createInfos();
@@ -25,6 +32,31 @@ public class Main {
         // canAddReview의 true/false 여부에 따라 유저에게 상태 알림을 보낼 수 있음
         canAddReview = createReview("hero11", 2, 10, "아주 좋았어요2");
         canAddReview = createReview("nice", 3, 6, "보통이에요");
+
+        // 특정 과목ID로 해당 과목을 가르치는 teacher의 이름 출력
+        getTeacherNameByLectureId(1);
+        getTeacherNameByLectureId(3);
+
+        // 특정 teacher가 가르치는 과목명 리스트 출력
+        getLectureTitleListByTeacherId("teacherNo1")
+                .stream().forEach(System.out::println);
+
+        // Reply 객체가 생성될때 해당 글의 객체에 있는 replies 필드에 등록
+        replyArrayList = new ArrayList<>();
+        Reply reply1 = new Reply("댓글 달기 1"
+                , "goodlife", 1);
+        if (createReply(reply1)) {
+            replyArrayList.add(reply1);
+        }
+        Reply reply2 = new Reply("댓글 달기 2"
+                , "hero11", 3);
+        if (createReply(reply2)) {
+            replyArrayList.add(reply2);
+        }
+        freeBoards.stream().forEach(System.out::println);
+        for (int i=0; i<freeBoards.size(); i++) {
+            freeBoards.get(i).getReplies().stream().forEach(System.out::println);
+        }
     }
 
     // 수강등록클래스에서 lectureId로 수강생의 loginId 찾기
@@ -44,7 +76,7 @@ public class Main {
     public static void getTitleByLoginId(String loginId) {
         for (int i=0; i<lectureRegistrations.size(); i++) {
             if(lectureRegistrations.get(i).getLoginId().equals(loginId)) {
-                int lectureId = lectureRegistrations.get(i).lectureId;
+                int lectureId = lectureRegistrations.get(i).getLectureId();
                 for (int j=0; j<lectures.size(); j++) {
                     if (lectures.get(j).getLectureId() == lectureId) {
                         String title = lectures.get(j).getTitle();
@@ -116,6 +148,46 @@ public class Main {
         reviews.add(new Review(reviews.size()+1, rating, text, loginId, lectureId));
         System.out.println(reviews.toString());
         return true;
+    }
+
+    public static void getTeacherNameByLectureId(int lectureId) {
+        for (int i=0; i<lectureTeachers.size(); i++) {
+            if (lectureTeachers.get(i).getLectureId() == lectureId) {
+                String teacherId = lectureTeachers.get(i).getTeacherId();
+                for (int j=0; j<teachers.size(); j++) {
+                    if (teachers.get(j).getTeacherId().equals(teacherId)) {
+                        String teacherName = teachers.get(j).getName();
+                        System.out.println(teacherName);
+                    }
+                }
+            }
+        }
+    }
+
+    public static List<String> getLectureTitleListByTeacherId(String teacherId) {
+        List<String> lectureTitleList = new ArrayList<>();
+        for (int i=0; i<lectureTeachers.size(); i++) {
+            if (lectureTeachers.get(i).getTeacherId().equals(teacherId)) {
+                int lectureId = lectureTeachers.get(i).getLectureId();
+                for (int j=0; j<lectures.size(); j++) {
+                    if (lectures.get(j).getLectureId() == lectureId) {
+                        lectureTitleList.add(lectures.get(j).getTitle());
+                    }
+                }
+            }
+        }
+        return lectureTitleList;
+    }
+
+    public static boolean createReply(Reply reply) {
+        for (int i=0; i<Main.freeBoards.size(); i++) {
+            if (Main.freeBoards.get(i).getFreeBoardId() == reply.getFreeBoardId()) {
+                FreeBoard freeBoard = Main.freeBoards.get(i);
+                freeBoard.setReplies(reply);
+                return true;
+            }
+        }
+        return false;
     }
 }
 

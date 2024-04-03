@@ -3,11 +3,11 @@ package Java0328_User;
 import java.time.LocalDate;
 
 public class User {
-    String name;
-    String loginId;
-    String password;
-    LocalDate birthDate;
-    String email;
+    private String name;
+    private String loginId;
+    private String password;
+    private LocalDate birthDate;
+    private String email;
 
     public User() {
     }
