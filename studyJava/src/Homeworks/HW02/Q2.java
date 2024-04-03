@@ -34,7 +34,7 @@ class MyTv {
 
 public class Q2 {
     public static void main(String[] args) {
-        //  Tv 클래스를 위에 정의된 로직(=Logic)대로 완성하시오
+        //  Tv 클래스를 위에 정의된 로직(=Logic)대로 MyTv의 메서드들을 완성하시오
         //  main 메서드를 실행하여 주석에 적힌 실행결과와 일치하는지 확인.
         MyTv t = new MyTv();
         t.channel = 100;

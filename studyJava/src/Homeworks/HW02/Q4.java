@@ -113,11 +113,15 @@ public class Q4 {
             , String[] models, int[] years, String[] colors) {
         List<MyCar> myCarList = new ArrayList<>();
 
+        // 여기 코드 작성 !!
+
         return myCarList;
     }
 
     public static SimpleCarInfo[] sendCarInfo(List<MyCar> carList) {
         SimpleCarInfo[] cars = new SimpleCarInfo[carList.size()];
+
+        // 여기 코드 작성 !!
 
         return cars;
     }

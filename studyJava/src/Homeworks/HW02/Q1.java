@@ -10,7 +10,7 @@ public class Q1 {
     }
 
     public static String changeCase(String str) {
-
+        // 여기 코드 작성 !!
         return "";
     }
 }
