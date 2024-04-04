@@ -22,12 +22,16 @@ public class FileInputOutput {
         int data = 0;
         byte[] buffer = new byte[1000];
         String str = "";
-        while (data != -1) {
-            data = is.read(buffer);
-            if (data >= 0) {
+//        while (data != -1) {
+//            data = is.read(buffer);
+//            if (data >= 0) {
+//                str = str + new String(buffer, 0, data,
+//                        Charset.forName("UTF-8"));
+//            }
+//        }
+        while ((data = is.read(buffer)) != -1) {
                 str = str + new String(buffer, 0, data,
                         Charset.forName("UTF-8"));
-            }
         }
         System.out.println(str);
         is.close();
