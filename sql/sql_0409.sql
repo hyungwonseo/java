@@ -89,10 +89,22 @@ order by 마일리지 desc
 limit 3;
 
 -- 제품중에서 '주스' 제품에 대한 정보
+select * from 제품
+where 제품명 like '%주스%';
+
 -- 단가가 5000원 이상 10000원 이하인 '주스'제품
+select * from 제품
+where 제품명 like '%주스%' and 단가 between 5000 and 10000;
+
 -- 제품번호가 1,2,4,7,11,20 인 제품
+select * from 제품
+where 제품번호 in (1,2,4,7,11,20);
+
 /* 재고금액이 높은 상위 10개 제품에 대한 제품번호, 제품명, 단가, 재고,
 재고금액(단가*재고) */
+select 제품번호, 제품명, 단가, 재고, 단가*재고 as 재고금액
+from 제품
+order by 5 desc limit 10; -- 숫자는 select의 컬럼순서(5=재고금액)
 
 
 
