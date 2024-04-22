@@ -34,7 +34,9 @@
 - exception 패키지 생성 필수
   : ResourceNotFoundException
 
-
+- 외래키 제한으로 테이블 삭제 안될때 아래 명령어 사용하고 직접 drop으로 삭제
+  SET foreign_key_checks = 0;  
+  drop table 테이블명1,테이블명2,.....;
 
 
 
