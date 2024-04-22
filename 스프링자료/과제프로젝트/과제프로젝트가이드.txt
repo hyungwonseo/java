@@ -4,13 +4,13 @@
 - 데이터베이스 : wholesale_company
 
 - 모델 엔티티 구성
-  Customer.java  (고객)
-  Department.java  (부서)
-  Employee.java  (사원)
-  Mileage.java  (마일리지등급)
-  Order.java  (주문)
-  OrderDetail.java  (주문세부)
-  Product.java  (제품)
+  Customer.java  (고객) : customerId, customerName, customerEmployee, employeeTitle, 		address, city, area, phoneNumber, mileage
+  Department.java  (부서) : departId, departName
+  Employee.java  (사원) : employeeId, name, englishName, position, gender, birthDate, 		hireDate, address, city, area, telephoneNo, managerId, department
+  Mileage.java  (마일리지등급) : mileageGrade, lowLimit, highLimit
+  Order.java  (주문) : orderId, customer, employee, orderDate, requestDate, shippingDate
+  OrderDetail.java  (주문세부) : orderDetailId, order, product, unitPrice, orderQuantity, 		discountRate
+  Product.java  (제품) : productId, productName, pkgUnit, unitPrice, inventory
 
   ** OrderDetail 엔티티의 경우, 아래 필드를 primary key로 추가해야 함.
   @Id
