@@ -1,0 +1,40 @@
+<과제 프로젝트 가이드>
+- group id : dw
+- artifact id : wholesale_company
+- 모델 엔티티 구성
+  Customer.java  (고객)
+  Department.java  (부서)
+  Employee.java  (사원)
+  Mileage.java  (마일리지등급)
+  Order.java  (주문)
+  OrderDetail.java  (주문세부)
+  Product.java  (제품)
+
+  ** OrderDetail 엔티티의 경우, 아래 필드를 primary key로 추가해야 함.
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name="주문세부번호")
+  private long orderDetailId;
+
+  *** 위의 엔티티를 외래키를 고려하여 JPA에 맞게 구성해야 함
+  JPA에 의해 자동으로 테이블로 생성된 후, 첨부한 csv 파일로 import data 수행
+  사원_202404182300.csv 를 임포트할때 에러가 발생하는데 skip으로 넘기면 됨
+
+- Rest API (각 엔티티(=테이블)마다 전체 데이터를 read 하는 역할의 메서드 생성)
+  CustomerController : @GetMapping("/customers")
+  DepartmentController : @GetMapping("/departments")
+  EmployeeController : @GetMapping("/employees")
+  MileageController : @GetMapping("/mileages")
+  OrderController : @GetMapping("/orders")
+  OrderDetailController : @GetMapping("/orderdetails")
+  ProductController : @GetMapping("/products")
+
+- exception 패키지 생성 필수
+  : ResourceNotFoundException
+
+
+
+
+
+
+
