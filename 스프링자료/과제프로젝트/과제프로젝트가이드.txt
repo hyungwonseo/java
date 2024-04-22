@@ -1,6 +1,8 @@
 <과제 프로젝트 가이드>
 - group id : dw
 - artifact id : wholesale_company
+- 데이터베이스 : wholesale_company
+
 - 모델 엔티티 구성
   Customer.java  (고객)
   Department.java  (부서)
