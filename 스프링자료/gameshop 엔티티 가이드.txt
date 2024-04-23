@@ -1,0 +1,26 @@
+<Game>
+long id  기본키
+String title
+String genre
+int price
+String image  크기는 65535
+String text  크기는 65535
+
+<Purchase>
+long id  기본키
+Game game  외래키
+User user  외래키
+LocalDateTime purchaseTime
+
+<Review>
+long id  기본키
+Game game
+User user
+int point
+String reviewText  크기는 65535
+LocalDateTime createdAt
+
+<User>
+String userId 기본키
+String userName
+String email
