@@ -1,0 +1,12 @@
+<gameshop 회원가입 기능 만들기>
+1) signup-box 만들기 
+: login-box와 유사하게 만들고 hidden으로 세팅
+2) 회원가입 버튼 만들기
+: 로그인버튼옆에 회원가입 버튼을 만들어서 클릭하면 화면에
+signup-box가 보이도록 함
+3) 회원가입에 필요한 input창 만들기
+: userDto와 동일하게 정보를 입력하게 하고 change이벤트를
+등록하여 변수에 담아둠 (login-box에 사용한 input 이벤트 참조)
+4) signup-box안에 signup 버튼 이벤트 등록
+: signup 버튼을 누르면 3)번에서 작성된 변수를 이용하여 
+axios data 객체를 구성하고 회원가입 rest api 주소로 Post 요청함
