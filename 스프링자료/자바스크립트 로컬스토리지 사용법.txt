@@ -1,0 +1,13 @@
+<로컬 스토리지 사용법> (sessionStorage도 동일)
+- 읽기
+localStorage.getItem(키);
+
+- 쓰기
+localStorage.setItem(키, 값);
+
+- JSON 형태로 저장하기
+localStorage.setItem(키, JSON.stringify(값));
+
+- JSON 을 객체형태로 변환해서 읽기
+JSON.parse(localStorage.getItem(키));
+
